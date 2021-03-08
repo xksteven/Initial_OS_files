@@ -121,3 +121,58 @@ umask ug=rwx,o=
 ####### Setup bazel to run
 export PATH=~/bin:$PATH:~/.local/bin
 
+#function my_ip() # get IP adresses 
+my_ip () {  
+        MY_IP=$(/sbin/ifconfig wlan0 | awk "/inet/ { print $2 } " | sed -e s/addr://) 
+                #/sbin/ifconfig | awk /'inet addr/ {print $2}'  
+        MY_ISP=$(/sbin/ifconfig wlan0 | awk "/P-t-P/ { print $3 } " | sed -e s/P-t-P://) 
+} 
+ 
+# get current host related info 
+ii () { 
+    echo -e "\nYou are logged on ${red}$HOST" 
+    echo -e "\nAdditionnal information:$NC " ; uname -a 
+    echo -e "\n${red}Users logged on:$NC " ; w -h 
+    echo -e "\n${red}Current date :$NC " ; date 
+    echo -e "\n${red}Machine stats :$NC " ; uptime 
+    echo -e "\n${red}Memory stats :$NC " ; free 
+    echo -en "\n${red}Local IP Address :$NC" ; /sbin/ifconfig wlan0 | awk /'inet addr/ {print $2}' | sed -e s/addr:/' '/  
+    #my_ip 2>&. ; 
+    #my_ip 2>&1 ; 
+    #echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP:."Not connected"} 
+    #echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP:."Not connected"} 
+    #echo -e "\n${RED}Local IP Address :$NC" ; echo ${MY_IP} #:."Not connected"} 
+    #echo -e "\n${RED}ISP Address :$NC" ; echo ${MY_ISP} #:."Not connected"} 
+    echo 
+} 
+ 
+ 
+# Easy extract 
+extract () { 
+  if [ -f $1 ] ; then 
+      case $1 in 
+          *.tar.bz2)   tar xvjf $1    ;; 
+          *.tar.gz)    tar xvzf $1    ;; 
+          *.bz2)       bunzip2 $1     ;; 
+          *.rar)       rar x $1       ;; 
+          *.gz)        gunzip $1      ;; 
+          *.tar)       tar xvf $1     ;; 
+          *.tbz2)      tar xvjf $1    ;; 
+          *.tgz)       tar xvzf $1    ;; 
+          *.zip)       unzip $1       ;; 
+          *.Z)         uncompress $1  ;; 
+          *.7z)        7z x $1        ;; 
+          *)           echo "don't know how to extract '$1'..." ;; 
+      esac 
+  else 
+      echo "'$1' is not a valid file!" 
+  fi 
+}
+
+# consider using bash themes: 
+# git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+# ~/.bash_it/install.sh
+#add 
+#export BASH_IT="/home/$USER/.bash_it"
+#export BASH_IT_THEME="bobby" # or whatever other theme I want to use/try
+
