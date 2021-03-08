@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/xksteven/.ssh'
+let g:netrw_dirhist_8='/home/xksteven/workspace/research/automated_programs/apps-beta/Codewars/data/0'
+let g:netrw_dirhist_7='/home/xksteven/workspace/automated_programs/apps-beta/leetcode/data/805._binary_trees_with_factors'
+let g:netrw_dirhist_6='/home/xksteven/workspace/web/xksteven.github.io/_layouts'
+let g:netrw_dirhist_5='/home/xksteven/workspace/automated_programs/get_leet_url'
+let g:netrw_dirhist_4='/home/xksteven/workspace/web/naggita/_posts'
+let g:netrw_dirhist_3='/home/xksteven/workspace/web/naggita/examples'
+let g:netrw_dirhist_2='/home/xksteven/workspace/web/naggita/resources'
+let g:netrw_dirhist_1='/home/xksteven/workspace/web/naggita/_includes'
