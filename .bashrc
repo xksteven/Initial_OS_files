@@ -61,11 +61,11 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [[ "$TERM" =~ 256color ]]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[38;5;63m\]\D{%T} \[\e[38;5;117m\]\u@\h:\[\e[38;5;27m\]\w \[\e[38;5;22m\]\$ \[\e[00m\]'
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[38;5;63m\]\D{%T} \[\e[38;5;117m\]\u@\h:\[\e[38;5;27m\]\w \n\[\e[38;5;22m\]\$ \[\e[00m\]'
 elif [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\D{%T}\ \u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\D{%T}\ \u@\h\[\033[00m\]:\[\033[01;34m\]\w\n\[\033[00m\]\$ '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\D{%T} \u@\h:\w\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\D{%T} \u@\h:\w\n\$ '
 fi
 unset color_prompt force_color_prompt
 
