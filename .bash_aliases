@@ -1,4 +1,5 @@
 #ls aliases
+#note on Mac's --color has been replaced with -G
 alias ls="ls --color=auto"
 alias ll="ls -alF --color=auto"
 alias la="ls -A --color=auto"
