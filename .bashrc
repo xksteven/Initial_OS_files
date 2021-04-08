@@ -116,7 +116,7 @@ PROMPT_DIRTRIM=2
 export PATH=~/usr/bin:$PATH
 
 ####### Change the default file creation permissions
-umask ug=rwx,o=
+#umask ug=rwx,o=
 
 ####### Setup bazel to run
 export PATH=~/bin:$PATH:~/.local/bin
