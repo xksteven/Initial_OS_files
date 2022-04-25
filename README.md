@@ -1,2 +1,2 @@
-# ubuntu_init
-bash, vim and other configuration files when first setting up Ubuntu
+# config_files
+bash, vim and other configuration files when first setting up an Operating System like Ubuntu.
