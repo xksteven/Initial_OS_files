@@ -62,7 +62,10 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    history-substring-search # Supposed to come with Manjaro but wasn't working
     z
+    zsh-autosuggestions
+    # zsh-syntax-highlighting # Manjaro comes with this by default
     )
 
 source $ZSH/oh-my-zsh.sh
