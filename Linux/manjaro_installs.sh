@@ -1,4 +1,5 @@
-
+# Install OhMyZsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install git
 sudo pacman -S git 
@@ -10,7 +11,7 @@ sudo git clone https://aur.archlinux.org/yay-git.git
 sudo chown -R $USER:$USER ./yay-git
 makepkg -si
 
-
+# Install slack
 git clone https://aur.archlinux.org/slack-desktop.git
 cd slack-desktop
 makepkg -sri
