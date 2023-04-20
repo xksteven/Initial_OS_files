@@ -1,15 +1,15 @@
 # Use powerline
-USE_POWERLINE="true"
+# USE_POWERLINE="true"
 
 # Source manjaro-zsh-configuration
 if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
 
-# Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
-  source /usr/share/zsh/manjaro-zsh-prompt
-fi
+# # Use manjaro zsh prompt
+# if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
+#   source /usr/share/zsh/manjaro-zsh-prompt
+# fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -19,6 +19,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
+# Install from https://github.com/romkatv/powerlevel10k#oh-my-zsh
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
