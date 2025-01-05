@@ -112,14 +112,10 @@ shopt -s cdspell
 #Shortens Directory length
 PROMPT_DIRTRIM=2
 
-####### Setup sublime to run
-export PATH=~/usr/bin:$PATH
+export PATH=~/usr/bin:~/bin:$PATH:~/.local/bin
 
 ####### Change the default file creation permissions
 #umask ug=rwx,o=
-
-####### Setup bazel to run
-export PATH=~/bin:$PATH:~/.local/bin
 
 #function my_ip() # get IP adresses 
 my_ip () {  

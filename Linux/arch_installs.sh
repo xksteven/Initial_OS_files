@@ -26,7 +26,7 @@ sudo pacman -S code vim
 # Browser of choice
 sudo pacman -S vivaldi
 
-# Move player
+# Movie player
 sudo pacman -S vlc
 
 # Install media codecs

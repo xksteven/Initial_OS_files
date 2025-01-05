@@ -28,7 +28,5 @@ alias ....="cd ..; cd ..; cd .."
 
 alias g="git"
 
-
 alias ta="tmux -ad"
-
 

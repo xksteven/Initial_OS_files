@@ -26,4 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+TZ='America/New_York'; export TZ
+
 export PATH="$HOME/.cargo/bin:$PATH"
