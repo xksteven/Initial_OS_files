@@ -18,6 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 # Install from https://github.com/romkatv/powerlevel10k#oh-my-zsh
 # ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="tjkirch"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
