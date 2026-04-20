@@ -1,3 +1,7 @@
+# Install to: /etc/systemd/system/bluetooth-monitor.service
+# Then: sudo systemctl daemon-reload
+# (Enable/start via the .timer, not this unit directly.)
+
 [Unit]
 Description=Bluetooth Monitor Service
 After=bluetooth.service

@@ -1,3 +1,8 @@
+# Install to: /etc/systemd/system/bluetooth-monitor.timer
+# Then:
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now bluetooth-monitor.timer
+
 [Unit]
 Description=Run Bluetooth Monitor Script Every Minute
 
