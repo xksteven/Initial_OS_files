@@ -1,0 +1,8 @@
+[Unit]
+Description=Bluetooth Monitor Service
+After=bluetooth.service
+Wants=bluetooth.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/bluetooth_monitor.sh

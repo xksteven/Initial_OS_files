@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Bluetooth Monitor Script Every Minute
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+Unit=bluetooth-monitor.service
+
+[Install]
+WantedBy=timers.target

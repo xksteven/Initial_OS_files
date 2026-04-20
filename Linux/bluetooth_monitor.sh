@@ -1,34 +1,10 @@
 #!/bin/bash
 
 # Placed in /usr/local/bin/bluetooth_monitor.sh
+# Paired with bluetooth-monitor.service and bluetooth-monitor.timer
+# (see sibling files in this directory).
 
-# Associated File /etc/systemd/system/bluetooth-monitor.service
-# [Unit]
-# Description=Bluetooth Monitor Service
-
-# [Service]
-# Type=oneshot
-# ExecStart=/usr/local/bin/bluetooth_monitor.sh
-
-# Associated File /etc/systemd/system/bluetooth-monitor.timer
-
-# [Unit]
-# Description=Run Bluetooth Monitor Script Every Minute
-
-# [Timer]
-# OnBootSec=1min
-# OnUnitActiveSec=1min
-# Unit=bluetooth-monitor.service
-
-# [Install]
-# WantedBy=timers.target
-
-
-# Check if Bluetooth is powered off
-status=$(bluetoothctl show | grep "Powered" | awk '{print $2}')
-echo $status
-
-# If Bluetooth is off, turn it on
-if [ "$status" == "no" ]; then
-    rfkill toggle bluetooth
-fi
+# Unblock rfkill in case it's soft-blocked, then ensure the adapter is powered.
+# Both commands are idempotent, so running every minute is harmless.
+rfkill unblock bluetooth
+bluetoothctl show | grep -q "Powered: yes" || bluetoothctl power on
