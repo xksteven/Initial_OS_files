@@ -8,7 +8,8 @@ alias l="ls -CF --color=auto"
 #python aliases
 alias python="python3"
 alias p="python3"
-alias pip="pip3"
+alias pip='uv pip'
+alias pip3='uv pip'
 
 alias dir="dir --color=auto"
 alias vdir="vdir --color=auto"
@@ -19,7 +20,8 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 
 alias c="clear"
-alias k="kill"
+# alias k="kill"   # overridden — k is kubectl (see ~/.zshenv)
+alias k="kubectl"
 alias o="xdg-open"
 alias home="cd ~"
 alias ..="cd .."
